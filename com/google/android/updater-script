@@ -1,0 +1,7 @@
+ui_print("installing Validus Kernel...");
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "system");
+package_extract_dir("system", "/system");
+unmount("/system");
+ui_print(" ");
+ui_print("Done!");

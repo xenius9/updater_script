@@ -1,5 +1,12 @@
-ui_print("installing Validus Kernel...");
-package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+ui_print("")
+ui_print("")
+ui_print("EvoMix Kernel")
+ui_print("")
+ui_print("Cleaning up")
 delete_recursive("/system/lib/modules");
-ui_print(" ");
+ui_print("")
+ui_print("Flashing boot.img");
+package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+ui_print("");
 ui_print("Done!");
+ui_print("")
